@@ -8,7 +8,7 @@ let classOfPre;
 // Слушатель кнопок 
 document.addEventListener('click', function (event) {
     taRget = event.target
-    if (taRget.tagName !== 'IMG') {
+    if (taRget.tagName !== 'IMG' || taRget.dataset.stop !=="") {
         return
     }
     if ((event.target.dataset.postAutorize == "")) {

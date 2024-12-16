@@ -27,7 +27,7 @@
                     3. Регистрируемся (Registration)
                 </li>
                 <p class="article__li ">
-                    Из-за того, что регистрация прошла успешно, в ответе получаем ошибку <span class="down"><img class="down__img" data-post-create src="./down.png" alt=""></span> 
+                    Из-за того, что регистрация прошла успешно, в ответе получаем ошибку <span class="down"><img class="down__img" data-post-create data-stop src="./down.png" alt=""></span> 
                     <br>
                     <pre class="preCreated hidden">
 <span class="span__blue" >{
@@ -41,7 +41,7 @@
                 </p>
 
                 <li class="article__li">
-                    4. Логинимся (Authentication). Для этого в POST-запросе вводим данные <span class="down"><img class="down__img" data-post-autorize src="./down.png" alt=""></span>
+                    4. Логинимся (Authentication). Для этого в POST-запросе вводим данные <span class="down"><img class="down__img" data-post-autorize data-stop src="./down.png" alt=""></span>
                 </li>
                 <p> 
                     <pre class="preAutorize hidden"><span class="span__blue">{
@@ -55,38 +55,38 @@
     <span class="span__blue">
     {
         <span class="span__red">"user"</span> :{
-            <span class="span__red">"username"</span> : "mikle" 
+            <span class="span__red">"username"</span> : "mikle", 
             <span class="span__red">"email"</span> :"i@mihail-denisenko.ru",
-            <span class="span__red">"token" "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+            <span class="span__red">"token"</span> :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
                 eyJpZCI6IjY3NWQ3ZGExY2UxOGQwMWIwMDJiNjQwMSIsInVzZXJuYW1lIjoibWlrbG
                 UiLCJleHAiOjE3Mzk0NTEwMTMsImlhdCI6MTczNDI2NzAxM30.Mr80xM5-eedFzuVOZ1G5MN6
-                _u2iwff3GwvKNpauK7EQ"</span>
+                _u2iwff3GwvKNpauK7EQ"
         }
     }</span>
-                            </span>
+                            
 
                         </p>
                         
 <img src="./autorizationUser.png" class="postAutorize" alt="">
                     </pre>
                 <li class="article__li">
-                5. Используя заголовок авторизации, получить данные текущего пользователя (Endpoints -> Получить текущего пользователя) :<span class="down"><img class="down__img" data-get-user src="./down.png" alt=""></span>
+                5. Используя заголовок авторизации, получить данные текущего пользователя (Endpoints -> Получить текущего пользователя) :<span class="down"><img class="down__img" data-stop data-get-user src="./down.png" alt=""></span>
                     <pre class="preUser hidden">
     Во вкладке "Autorization" добавим полученный token: и получим ответ: 
 
 <span class="span__blue">
 {
     <span class="span__red">"user"</span> :{
-        <span class="span__red">"username"</span> : "mikle"
+        <span class="span__red">"username"</span> : "mikle",
         <span class="span__red">"email"</span> :"i@mihail-denisenko.ru",
-        <span class="span__red">"token" "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+        <span class="span__red">"token"</span> :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
                 eyJpZCI6IjY3NWQ3ZGExY2UxOGQwMWIwMDJiNjQwMSIsInVzZXJuYW1lIjoibWlrbG
                 UiLCJleHAiOjE3Mzk0NTEwMTMsImlhdCI6MTczNDI2NzAxM30.Mr80xM5-eedFzuVOZ1G5MN6
-                _u2iwff3GwvKNpauK7EQ"</span>
+                _u2iwff3GwvKNpauK7EQ"
     }
 }</span>
                         </span>
-<img src="./getUser.png" class="getUser" alt="">
+<img src="./getUser.png" class="getUser"  alt="">
                     </pre>
             </li>
 

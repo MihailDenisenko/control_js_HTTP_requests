@@ -1,3 +1,4 @@
+
 const created = document.querySelector('.preCreated')
 const autorize = document.querySelector(".preAutorize");
 const getUser = document.querySelector(".preUser");
@@ -7,7 +8,9 @@ let classOfPre;
 // Слушатель кнопок 
 document.addEventListener('click', function (event) {
     taRget = event.target
-    console.log(taRget.classList)
+    if (taRget.tagName !== 'IMG') {
+        return
+    }
     if ((event.target.dataset.postAutorize == "")) {
         classOfPre = ".preAutorize";
         event.target.style.transform = "rotate(180deg)"
@@ -22,7 +25,6 @@ document.addEventListener('click', function (event) {
 })
 
 
-
 // функция обработчик кнопок
 function classEditor(classOf, taRget) {
     taRget.classList.toggle('down__img')
@@ -33,5 +35,3 @@ function classEditor(classOf, taRget) {
     console.log(elemtnPre)
     elemtnPre.classList.toggle('hidden')
 }
-
-

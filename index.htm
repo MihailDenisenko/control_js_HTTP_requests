@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./post.png" type="image/png">
+    <title>Postman</title>
+</head>
+<body>
+    <div class="title">
+        <h1 class="title__h1">ПРАКТИЧЕСКОЕ ЗАДАНИЕ 4.3.9</h1>
+    </div>
+    <div class="article">
+        <div class="article__p">
+            Для выполнения данного задания использовалось приложение <a href="https://www.postman.com/">POSTMAN</a> для WINDOWS
+        </div>
+        <div class="">
+            <ul class="article__ul">Перечень Заданий
+                <li class="article__li">
+                    1. Качаем Postman, дальше все запросы отправляем с его помощью
+                </li>
+                <li class="article__li">
+                    2. Смотрим документацию
+                </li>
+                <li class="article__li">
+                    3. Регистрируемся (Registration)
+                </li>
+                <p class="article__li ">
+                    Из-за того, что регистрация прошла успешно, в ответе получаем ошибку <span class="down"><img class="down__img" data-post-create src="./down.png" alt=""></span> 
+                    <br>
+                    <pre class="preCreated hidden">
+<span class="span__blue" >{
+    <span class="span__red">"errors"</span> :{
+        <span class="span__red">"username"</span> "is already taken.",
+        <span class="span__red">"email"</span> "is already taken."
+    }
+}</span>
+                    </pre>
+                    <img src="./postRegistration.png" alt="" class="postRegistration hidden">
+                </p>
+
+                <li class="article__li">
+                    4. Логинимся (Authentication). Для этого в POST-запросе вводим данные <span class="down"><img class="down__img" data-post-autorize src="./down.png" alt=""></span>
+                </li>
+                <p> 
+                    <pre class="preAutorize hidden"><span class="span__blue">{
+<span class="span__red">"user"</span> :{
+    <span class="span__red">"email"</span> "i@mihail-denisenko.ru",
+    <span class="span__red">"password"</span> "123456789qwerty."
+    }
+}</span>
+
+И получаем в ответе:
+    <span class="span__blue">
+    {
+        <span class="span__red">"user"</span> :{
+            <span class="span__red">"username"</span> : "mikle" 
+            <span class="span__red">"email"</span> :"i@mihail-denisenko.ru",
+            <span class="span__red">"token" "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+                eyJpZCI6IjY3NWQ3ZGExY2UxOGQwMWIwMDJiNjQwMSIsInVzZXJuYW1lIjoibWlrbG
+                UiLCJleHAiOjE3Mzk0NTEwMTMsImlhdCI6MTczNDI2NzAxM30.Mr80xM5-eedFzuVOZ1G5MN6
+                _u2iwff3GwvKNpauK7EQ"</span>
+        }
+    }</span>
+                            </span>
+
+                        </p>
+                        
+<img src="./autorizationUser.png" class="postAutorize" alt="">
+                    </pre>
+                <li class="article__li">
+                5. Используя заголовок авторизации, получить данные текущего пользователя (Endpoints -> Получить текущего пользователя) :<span class="down"><img class="down__img" data-get-user src="./down.png" alt=""></span>
+                    <pre class="preUser hidden">
+    Во вкладке "Autorization" добавим полученный token: и получим ответ: 
+
+<span class="span__blue">
+{
+    <span class="span__red">"user"</span> :{
+        <span class="span__red">"username"</span> : "mikle"
+        <span class="span__red">"email"</span> :"i@mihail-denisenko.ru",
+        <span class="span__red">"token" "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+                eyJpZCI6IjY3NWQ3ZGExY2UxOGQwMWIwMDJiNjQwMSIsInVzZXJuYW1lIjoibWlrbG
+                UiLCJleHAiOjE3Mzk0NTEwMTMsImlhdCI6MTczNDI2NzAxM30.Mr80xM5-eedFzuVOZ1G5MN6
+                _u2iwff3GwvKNpauK7EQ"</span>
+    }
+}</span>
+                        </span>
+<img src="./getUser.png" class="getUser" alt="">
+                    </pre>
+            </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

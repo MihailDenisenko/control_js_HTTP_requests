@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(90deg, #ffffff, hsla(180, 100%, 83%, 0.455))
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.title {
+    text-align: center;
+}
+
+.article__p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.article__ul {
+    font-size: 24px;
+}
+
+.postRegistration {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.down__img {
+    width: 20px;
+}
+
+
+@keyframes down-key{
+    0% {
+        transform: translateY(0px);
+        
+    }
+    100%{
+        transform: translateY(3px);
+    }
+}
+
+.down__img:hover {
+    /* transition: all 1s; */
+    animation-name: down-key;
+    animation-iteration-count: infinite;  
+    animation-duration: .3s;  
+}
+
+.up__img {
+    width: 20px;
+    /* tra  nsform: rotate(180deg); */
+}
+
+
+@keyframes up-key{
+    0% {
+        transform: translateY(0px);
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: translateY(5px);
+        transform: rotate(180deg);
+    }
+}
+
+.up__img:hover {
+    /* transition: all 1s; */
+    /* transform: rotate(180deg); */
+    animation-name: up-key;
+    animation-iteration-count: infinite;  
+    animation-duration: .3s;  
+        
+
+}
+
+
+.span__blue {
+    color: blue
+}
+
+.span__red {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.postAutorize {
+    width: 100%;
+    
+}

@@ -52,7 +52,10 @@ a {
     /* tra  nsform: rotate(180deg); */
 }
 
-
+pre {
+    width: 90%;
+    max-width: 90%;
+}
 @keyframes up-key{
     0% {
         transform: translateY(0px);

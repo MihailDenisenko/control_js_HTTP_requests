@@ -5,8 +5,9 @@ const getUser = document.querySelector(".preUser");
 let classOfPre;
 
 
-// Слушатель кнопок 
+// Слушатель кнопок
 document.addEventListener('click', function (event) {
+    navigator.vibrate(300)
     taRget = event.target
     if (taRget.tagName !== 'IMG' || taRget.dataset.stop !=="") {
         return
@@ -35,3 +36,5 @@ function classEditor(classOf, taRget) {
     console.log(elemtnPre)
     elemtnPre.classList.toggle('hidden')
 }
+
+const geo = Geolocation()

@@ -33,11 +33,11 @@ document.addEventListener('click', function (event) {
 function classEditor(classOf, taRget) {
     taRget.classList.toggle('down__img')
     taRget.classList.toggle("up__img");
-    console.log(taRget.classList)
+    // console.log(taRget.classList)
     
     const elemtnPre = document.querySelector(classOf);
-    console.log(elemtnPre)
+    // console.log(elemtnPre)
     elemtnPre.classList.toggle('hidden')
 }
 
-const geo = Geolocation()
+// const geo = Geolocation()

@@ -7,7 +7,10 @@ let classOfPre;
 
 // Слушатель кнопок
 document.addEventListener('click', function (event) {
-    navigator.vibrate(300)
+    navigator.vibrate([
+      100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30,
+      100,
+    ]);
     taRget = event.target
     if (taRget.tagName !== 'IMG' || taRget.dataset.stop !=="") {
         return
